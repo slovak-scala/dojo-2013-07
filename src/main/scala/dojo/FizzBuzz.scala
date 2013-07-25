@@ -13,8 +13,10 @@ package dojo
  *
  * Variations, new requirements:
  * 1. A number is Wizz if it is divisible by 7
- * 2. A number is Fizz if it is divisible by 3 or if it has a 3 in it
- * 3. A number is Buzz if it is divisible by 5 or if it has a 5 in it
+ * 2. Write everything immutable, no vars, no for loops
+ * 3. A number is Fizz if it is divisible by 3 or if it has a 3 in it
+ * 4. A number is Buzz if it is divisible by 5 or if it has a 5 in it
+ * 5. Write a program using PartialFunctions
  *
  * Happy coding :)
  */
