@@ -21,6 +21,23 @@ package dojo
  * Happy coding :)
  */
 object FizzBuzz {
+  def cyklus(i: Int): String = (for(x <- 1 to i) yield hra(x)).mkString(",")
+
+  val delitele:Seq[Int => Option[String]] = Seq(
+    del(_:Int,3,"Fizz"),
+    del(_:Int,5,"Buzz"),
+    del(_:Int,7,"Wizz")
+  )
+
+  def del(delenec:Int,delitel:Int,vysl:String):Option[String] = if(delenec % delitel == 0) Some(vysl) else None
+
+  def hra(i: Int):String = {
+    delitele.map( fn => fn(i) ).collect{ case Some(s) => s} match {
+      case Nil => i.toString
+      case l => l.mkString
+    }
+  }
+
   def main(args: Array[String]) = {
     // do something
   }
